@@ -16,7 +16,6 @@ jQuery.noConflict();
 	  	var elt = jQuery('.entry-meta a:last')
 		var url = elt.attr('href');
 
-		alert(url);
 		window.location.href(url);
 	};
 	
