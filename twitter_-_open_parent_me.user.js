@@ -13,10 +13,12 @@ jQuery.noConflict();
 (function() {
 	// create function
 	var open_parent = function() {
-	  	var elt = jQuery('.entry-meta a:last')
-		var url = elt.attr('href');
+	  	var a = jQuery('.entry-meta > a[href*="/status/"]:not([class~="entry-date"])')
 
-		window.location.href(url);
+		if (a.length) {
+			var url = a.attr('href');
+			window.location = url;
+		}
 	};
 	
 	// bind key-handler
